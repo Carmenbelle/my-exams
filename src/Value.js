@@ -1,36 +1,33 @@
-import React, {useReducer} from 'react'
+// import React, { useReducer } from "react";
+// import useValue from "./Components/usersdata";
 
-const initialValue = {
-    counter: 0
-}
-const reducer = (state, action) => {
-    switch(action.type) {
-        case 'increment':
-            return {counter: state.counter + 1}
-        case 'decrement':
-            return {counter: state.counter - 1}
-        case 'reset':
-            return initialValue
-        case 'getvalue':
-            return ''
-        default:
-            return state
-    }
-}
+// const Value = () => {
+//   const { initialValue, reducer } = useValue;
+//   const [state, dispatch] = useReducer(reducer, initialValue);
 
-const Value = () => {
-   const [count, dispatch] = useReducer(reducer, initialValue)
+//   const valueHandler = (event) => {
+//     // console.log(event.target.value);
+//     if (event.target.value !== "") {
+//       return dispatch({ type: "setValue", payload: event.target.value });
+//     }
+//     return dispatch({ type: "setValue", payload: 0 });
+//   };
 
+//   return (
+//     <div>
+//       <h1>Count: {state.counter}</h1>
+//       <button onClick={() => dispatch({ type: "increment" })}>
+//         Increase items
+//       </button>
+//       <button onClick={() => dispatch({ type: "decrement" })}>
+//         Reduce items
+//       </button>
+//       <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+//       <span>
+//         <input type="number" onChange={valueHandler} />
+//       </span>
+//     </div>
+//   );
+// };
 
-  return (
-    <div>
-        <h1>Count: {count.counter}</h1>
-        <button onClick={() => dispatch({type: "increment"})}>Increase items</button>
-        <button onClick={() => dispatch({type: "decrement"})}>Reduce items</button>
-        <button onClick={() => dispatch({type: 'reset'})}>Reset</button>
-
-    </div>
-  )
-}
-
-export default Value
+// export default Value;
